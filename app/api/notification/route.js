@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import admin from "firebase-admin";
 
 // Initialize Firebase Admin SDK only if no apps are initialized
-const privateKey = process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n");
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert({
