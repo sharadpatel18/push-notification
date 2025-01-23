@@ -5,15 +5,14 @@ import { initializeApp } from "firebase/app";
 import { getMessaging } from 'firebase/messaging' 
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyCR_bAqAr4v8hPKCdXAkaUKqFcsps9ykGY",
+  authDomain: "fir-task-ad9d9.firebaseapp.com",
+  projectId: "fir-task-ad9d9",
+  storageBucket: "fir-task-ad9d9.firebasestorage.app",
+  messagingSenderId: "573063164996",
+  appId: "1:573063164996:web:6a98aa6f7f1781e5887811",
+  measurementId: "G-ZT4NPECBN2",
 };
-
 
 const app = initializeApp(firebaseConfig);
 
