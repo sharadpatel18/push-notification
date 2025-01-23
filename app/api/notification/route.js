@@ -8,7 +8,7 @@ if (!admin.apps.length) {
       type: process.env.FIREBASE_TYPE,
       projectId: process.env.FIREBASE_PROJECT_ID,
       privateKeyId: process.env.FIREBASE_PRIVATE_KEY_ID,
-      privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'), 
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
       clientId: process.env.FIREBASE_CLIENT_ID,
       authUri: process.env.FIREBASE_AUTH_URI,
@@ -36,12 +36,14 @@ export async function POST(request) {
         title: "Hello",
         body: messageData,
       },
-      token: token, // Ensure this is defined and valid
+      token: token, 
     };
-
+    console.log(payload);
+    
     // Send the notification
     const response = await admin.messaging().send(payload);
-
+    console.log(response);
+    
     return NextResponse.json(
       { success: true, message: "Notification sent successfully", response },
       { status: 200 }
