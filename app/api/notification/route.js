@@ -42,17 +42,18 @@ export async function POST(request) {
     
     // Send the notification
    try {
+    console.log(admin.messaging());
+    
     const response = await admin.messaging().send(payload);
     console.log(response);
-   } catch (error) {
-    console.log("ERROR: ====> " , error);
-    
-   }
-    
     return NextResponse.json(
       { success: true, message: "Notification sent successfully", response },
       { status: 200 }
     );
+   } catch (error) {
+    console.log("ERROR: ====> " , error);
+    
+   }
   } catch (error) {
     console.error("Error sending notification:", error);
     return NextResponse.json(
